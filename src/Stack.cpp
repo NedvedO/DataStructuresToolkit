@@ -7,7 +7,7 @@ Stack::~Stack() {       // Destructor to clean up the stack
     while (pop(temp));  // Pop all elements to free memory. Keep popping until pop() returns false
 }
 
-void Stack::push(int value){
+void Stack::push(int value){      // :: scope resolution operator to define member function outside class
     Node* newNode = new Node();
     newNode->data = value;
     newNode->next = top;
