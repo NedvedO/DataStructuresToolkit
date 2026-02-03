@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Stack.h"
 #include "Queue.h"
+#include "LinkedList.h"
 
 int main(){
     // --- Stack Test ---
@@ -38,6 +39,24 @@ int main(){
     }
     if (!q.dequeue(value)) std::cout << "Queue is empty.\n";   
 
+    // --- Linked List Test ---
+    std::cout << "\n=== Linked List Test ===\n";
+    LinkedList list;
+
+    list.insertAtBeginning(20);
+    list.insertAtBeginning(10);
+    list.insertAtEnd(30);
+    list.insertAtEnd(40);
+
+    list.display();
+
+    std::cout << "Deleting 20...\n";
+    list.deleteValue(20);
+    list.display();
+
+    std::cout << "Deleting 10...\n";
+    list.deleteValue(10);
+    list.display();
 
     return 0;
 }
